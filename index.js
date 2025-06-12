@@ -15,11 +15,12 @@ app.get('/testApi', function (req, res) {
 app.post('/api/receive-tin', (req, res) => {
   console.log("HIIII");
   const tin = req.body.tin;
-  console.log("HIIII"+tin); // Log 123
+  console.log("HIIII" + tin); // Log 123
   // Option 1: Store in session/cookie
   // Option 2: Store in DB and generate a one-time token (for extra security)
   // Now, redirect to the Angular app
-  res.redirect('http://localhost:4200/home');
+  let j = [{ name: 'google' }, { name: 'microsoft' }]
+  res.redirect('http://localhost:4200/home' + '?parties=' + JSON.stringify(j));
 });
 
 app.listen(3000, function () {
