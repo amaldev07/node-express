@@ -12,6 +12,7 @@ app.get('/testApi', function (req, res) {
   res.send({ name: 'dev ssss' });
 });
 
+/* This is for redirecting from webapp using post */
 app.post('/api/receive-tin', (req, res) => {
   console.log("HIIII");
   const tin = req.body.tin;
